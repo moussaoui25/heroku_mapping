@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- leaflet  -->
+    <link rel="stylesheet" href="css/leaflet.css">
+    <script src="js/leaflet.js"></script>
+    <title>ServoSTAGE-Rabat</title>
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="mapbox">
+            <div class="row-fluid some" id="map"></div>
+
+            <div class="row-fluid overlay">
+
+                <div class="box">
+                    <br><br><br>
+
+                    <div id="spatialQuery" class="DIV">
+                        <hr>
+                        <h3>Connection à une base de données Postgres avec extension PostGIS</h3>
+
+                        <p>Essayer des requêtes comme:<br><br> <b>SELECT ST_AsGeoJSON(geom) AS geom FROM regions_wgs</b><br><br>
+                            <b>SELECT ST_AsGeoJSON(geom) AS geom FROM bureau_topo WHERE offre_ing='Stage PFE'
+                                </b><br><br>
+                                <table class="tg" style="table-layout: fixed; width: 400px">
+                                    <colgroup>
+                                        <col style="width: 95.75px">
+                                        <col style="width: 189.75px">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <td class="tg-3gq2">Tables</td>
+                                            <td class="tg-xrgz"><span style="font-weight:bold">Colonnes</span></td>
+                                        </tr>
+                                       
+                                        <tr>
+                                            <td class="tg-clpl">bureau_topo</td>
+                                            <td class="tg-2bev">gid, geom, lat, long, nom, offre_ing, offre_tech{'Stage libre', 'Stage PFE','Stage pré-embauche'
+                                            ,'1 ingénieur en topographie/technicien/dessinatrice', 'Rien'</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tg-clpl">bus</td>
+                                            <td class="tg-2bev">gid, geom, osm_id, type, name</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tg-clpl">cafe2</td>
+                                            <td class="tg-2bev">gid, geom, osm_id, type, name</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tg-clpl">regions_wgs</td>
+                                            <td class="tg-2bev">gid, geom, coderegion, nomregion</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                        </p>
+                        <!-- <input name="searchTxt" type="text" maxlength="1024" id="searchTxt" class="searchField" /> -->
+
+                        <input name="text" rows="14" cols="10" wrap="soft" name="searchTxt" id="searchTxt"
+                            class="searchField">
+
+                        <button id="btngetQuery">Exécuter</button><br><br>
+                        
+                        <button id="btngetQuery" href="" data-page-id="918219548" class="u-border-none u-btn u-btn-round u-button-style u-palette-2-light-3 u-radius-3 u-text-palette-2-dark-1 u-btn-1"> Retour Au Géoportail</button>
+                   
+                    </div>
+                    <br>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+    </div>
+
+</body>
+<script src="js/script.js"></script>
+<script src="js/script2.js"></script>
+
+</html>
